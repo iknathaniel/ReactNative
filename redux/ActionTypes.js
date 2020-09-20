@@ -15,4 +15,5 @@ export const PARTNERS_FAILED = 'PARTNERS_FAILED';
 
 export const ADD_FAVORITE = 'ADD_FAVORITE';
 
+// workshop 2
 export const ADD_COMMENT = 'ADD_COMMENT';

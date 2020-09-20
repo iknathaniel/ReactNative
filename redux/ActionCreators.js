@@ -153,6 +153,7 @@ export const addFavorite = campsiteId => ({
     payload: campsiteId
 });
 
+// workshop 2
 export const postComment = (campsiteId, rating, author, text) => (dispatch) => {
     const newComment ={ campsiteId, rating, author, text, date: new Date().toISOString() }
 
