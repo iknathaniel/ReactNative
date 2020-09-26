@@ -55,7 +55,11 @@ function RenderCampsite(props){
 
     const view = React.createRef();
 
+    // Gesture Right to Left - value less than 200
     const recognizeDrag = ({dx}) => (dx < -200) ? true : false;
+
+    // Gesture Left to Right - value more than 200
+    const recognizeComment = ({dx}) => (dx > 200) ? true : false;
 
     const panResponder = PanResponder.create({
         onStartShouldSetPanResponder: () => true,
@@ -83,6 +87,9 @@ function RenderCampsite(props){
                     ],
                     { cancelable: false }
                 );
+            }
+            else if (recognizeComment(gestureState)) {
+                props.onShowModal()
             }
             return true;
         }
